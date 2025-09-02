@@ -48,4 +48,4 @@ The output binary file consists of a series of 3D points. Each point is represen
 - `y`: 32-bit float
 - `z`: 32-bit float
 
-The points are written to the file sequentially.
+The points are written to the file sequentially. ( TODO make threads xd )
