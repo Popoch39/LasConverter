@@ -38,7 +38,8 @@ Then, run the executable:
 
 ### Future Improvements
 
-For more flexible usage, you could modify the `main` function to accept command-line arguments for the input and output file paths.
+- Accept command-line arguments for the input and output file paths
+- Implement the RGBPointStruct as well
 
 ## Output Format
 
