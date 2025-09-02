@@ -1,3 +1,5 @@
+mod compressor;
+
 use std::{
     fs::File,
     io::{BufReader, Write},
@@ -86,6 +88,7 @@ impl LasConverter {
         Ok(())
     }
 
+    //this is this dogshit btw so slow
     fn write_point_3d(
         &self,
         writer: &mut std::io::BufWriter<File>,
@@ -103,6 +106,9 @@ impl LasConverter {
 }
 
 fn main() {
-    let converter = LasConverter::new();
+    let compressor = compressor::Compressor::new("./compressed.laz", "./las/example.las");
+    compressor.compress();
+
+   let converter = LasConverter::new();
     converter.convert_to_bin("./las/example.las", "./output.bin", false);
 }
